@@ -48,4 +48,7 @@ The theme switching is implemented using:
 ```bash
 npm install
 ```
+![image](https://github.com/user-attachments/assets/3cbc600a-3c31-4dc4-8c42-96a169880a56)
+![image](https://github.com/user-attachments/assets/3342130c-1e8c-4910-941f-48df63571247)
+
 
