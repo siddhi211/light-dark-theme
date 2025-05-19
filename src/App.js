@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [theme, setTheme] = useState('light');
+
+  const toggleTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className={`App ${theme}`}>
+      <header className="top-bar">
+        <h1>My Website</h1>
+        <button onClick={toggleTheme}>
+          Switch to {theme === 'light' ? 'Dark' : 'Light'} Theme
+        </button>
       </header>
+      <main>
+        <h2>Welcome to my website!</h2>
+        <p>This is a simple React website with theme switching functionality.</p>
+      </main>
     </div>
   );
 }
